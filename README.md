@@ -2,6 +2,8 @@
 
 This repository contains files and information used to calibrate the data from the Rinehart group SQUID magnetometer. It is meant to be used within [magnetopy](https://github.com/RinehartGroup/MagnetoPy.git).
 
+The data here are specific to the Rinehart group's instrument. Other groups should create their own calibration repository with the same structure and install it with `mp-calibration <url>`.
+
 ## Installation
 
 Run the following command in the terminal while in your `magnetopy` environment:
@@ -29,7 +31,7 @@ These functionalities require instrument-specific and sometimes sequence-specifi
 
 ## Contents
 
-[calibration.json](calibration.json) has the following structure:
+[calibration.json](calibration.json) has the following structure (this example shows how a second sequence would be added; this repository currently contains only `sequence_1`):
 
 ```json
 {
@@ -43,7 +45,7 @@ These functionalities require instrument-specific and sometimes sequence-specifi
 
 The actual files are stored in [calibration_files](calibration_files). It's assumed that, when needed, a .rw.dat file containing the unprocessed data is also stored in this folder (with the default convention of having the same name as the .dat file, but with the .rw.dat extension).
 
-Only two categories of calibration files are currently support.
+Only two categories of calibration files are currently supported.
 
 1. "moment"
 
